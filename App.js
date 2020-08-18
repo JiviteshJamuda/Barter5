@@ -1,27 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
-import Login from "./screens/login"
+import {createAppContainer, createSwitchNavigator} from "react-navigation"; 
+import Login from "./screens/login";
+import {BottomTabNavigator} from "./components/BottomTabNavigator";
 
 export default function App() {
   return (
-    <View>
-      <Login/>
-    </View>
+      <AppContainer/>
   );
 }
 
-/* "This is for the future projects"
-
-const TabNavigator = createBottomTabNavigator({
-  Transaction: {screen: TransactionScreen},
-  Search: {screen: SearchScreen},
-});
-
 const switchNavigator = createSwitchNavigator({
 LoginScreen:{screen: Login},
-TabNavigator:{screen: TabNavigator}
+BottomTab:{screen: BottomTabNavigator}
 })
 
 const AppContainer =  createAppContainer(switchNavigator);
-*/

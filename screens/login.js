@@ -79,7 +79,7 @@ export default class Login extends React.Component {
           >
           <View style={styles.modalContainer}>
             <ScrollView style={{width:'100%'}}>
-              <KeyboardAvoidingView style={styles.KeyboardAvoidingView}>
+              <KeyboardAvoidingView style={styles.KeyboardAvoidingView} behavior="padding">
               <Text
                 style={styles.modalTitle}
                 >Registration</Text>
@@ -180,6 +180,7 @@ export default class Login extends React.Component {
     render(){
         return(            
             <View style={{justifyContent: 'center',alignItems: 'center'}}>
+              <KeyboardAvoidingView>
                 {this.showModal()}
                 <Text style={styles.title}>Barter trades</Text>
                 <TextInput
@@ -206,6 +207,7 @@ export default class Login extends React.Component {
                 style={[styles.button,{marginBottom:20, marginTop:20}]}
                 onPress = {()=>{
                     this.userLogin(this.state.emailId, this.state.password);
+                    this.props.navigation.navigate("BottomTab");
                 }}>
                 <Text style={styles.buttonText}>Login</Text>
                 </TouchableOpacity>
@@ -216,6 +218,7 @@ export default class Login extends React.Component {
                 >
                 <Text style={styles.buttonText}>SignUp</Text>
                 </TouchableOpacity>
+              </KeyboardAvoidingView>
             </View>        
         )
     }
