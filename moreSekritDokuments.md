@@ -1,7 +1,7 @@
 # The Barter system will rule again 
 
 ## What we have added
-We added a sidebar so that the user can get into more confusion with the option to go from Home to Settings or Settings to Home
+A form in the settings screen so that the user can change the details to annoy the other guy
 
 ## Conclusion 
 Barter system will rule again
