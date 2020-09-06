@@ -19,15 +19,23 @@ export default class Exchange extends React.Component {
         this.state={
             item:"",
             description:"",
+            userId:firebase.auth().currentUser.email,
         }
     }
 
     addItem = ()=>{
+        var id = this.createUniqueId();
         db.collection("requests").add({
             item : this.state.item,
-            description : this.state.description 
+            description : this.state.description,
+            requestId : id, 
+            user_id : this.state.userId,
         });
         return(alert("item added"));
+    }
+
+    createUniqueId = ()=>{
+        return Math.random().toString(36).substring(5)
     }
 
     render(){

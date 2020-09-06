@@ -17,14 +17,14 @@ export default class Login extends React.Component {
     constructor(){
         super();
         this.state={
-        emailId:'',
-        password:'',
-        firstName:'',
-        lastName:'',
-        address:'',
-        contact:'',
-        confirmPassword:'',
-        isModalVisible:'false'
+          emailId:'',
+          password:'',
+          firstName:'',
+          lastName:'',
+          address:'',
+          contact:'',
+          confirmPassword:'',
+          isModalVisible:'false'
         }
     }
 
@@ -58,17 +58,17 @@ export default class Login extends React.Component {
         }
     }
 
-    userLogin = (emailId, password)=>{
-        firebase.auth().signInWithEmailAndPassword(emailId, password)
-        .then(()=>{
-            this.props.navigation.navigate("Drawer");
-        })
-        .catch((error)=> {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            return alert(errorMessage)
-        })
-    }
+  userLogin = (emailId, password)=>{
+    firebase.auth().signInWithEmailAndPassword(emailId, password)
+    .then(()=>{
+      this.props.navigation.navigate("Drawer");
+    })
+    .catch((error)=> {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      return alert(errorMessage)
+    })
+  }
 
     showModal = ()=>{
         return(
