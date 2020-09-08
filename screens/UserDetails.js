@@ -48,7 +48,7 @@ export default class UserDetails extends React.Component {
             exchanger_name : this.state.exchangerName,
             exchanger_contact : this.state.exchangerContact,
             exchanger_address : this.state.exchangerAddress,
-            exchanger_id : this.state.userId,
+            exchanger_id : this.state.exchangerId,
             exchange_status : "interested",
             user_id : this.state.userId,
             description : this.state.description,
